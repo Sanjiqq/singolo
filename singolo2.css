@@ -1,0 +1,218 @@
+body {
+  font-family: "Lato", "Open Sans" sans-serif;
+}
+
+.portfolio {
+  width: 1020px;
+  margin: auto;
+  height: 870px;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+  box-sizing: border-box;
+}
+
+.about {
+  width: 1020px;
+  margin: auto;
+  height: 734px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: block;
+  justify-content: space-between;
+  width: 1020px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+.portfolio__tittle {
+  padding-top: 63px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Lato";
+  color: #666d89;
+  letter-spacing: -0.2px;
+}
+
+.portfolio__descr {
+  padding-top: 27px;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Lato";
+  color: #767e9e;
+}
+
+.portfolio__nav ul {
+  display: flex;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.portfolio__nav ul li p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato";
+  border: 1px solid #666d89;
+  margin-top: 17px;
+  margin-left: -1px;
+  margin-right: 0;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  color: #767e9e;
+}
+
+.portfolio__item:hover {
+  color: #dedede;
+  border-color: #c5c5c5;
+  cursor: pointer;
+}
+
+.portfolio__item.btn1 {
+  margin-left: 0.5px;
+  padding: 4px 7px 4px 7.5px;
+  width: 13px;
+  color: #dedede;
+  border-color: #c5c5c5;
+}
+
+.portfolio__item.btn2 {
+  padding: 4px 6px 4px 6px;
+  width: 64px;
+  letter-spacing: -0.05px;
+  margin-left: 10px;
+}
+
+.portfolio__item.btn3 {
+  width: 90px;
+  margin-left: 10px;
+  padding: 4px 1px 4px 0px;
+}
+
+.portfolio__item.btn4 {
+  width: 50px;
+  padding: 4px 2px 4px 3px;
+  margin-left: 10px;
+}
+
+.image-block_-deadline {
+  margin-top: 1px;
+  padding: 500px;
+  padding-left: 0;
+  background: url("./Assets/img/img.png") no-repeat -16px -28px;
+}
+
+.about__tittle {
+  padding-top: 62px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Lato";
+  color: #666d89;
+  letter-spacing: -0.2px;
+}
+
+.about p {
+  margin-right: 41px;
+  padding-top: 21px;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: "Lato";
+  letter-spacing: 0px;
+  line-height: 1.7em;
+  text-align: justify;
+  color: #767e9e;
+}
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about__person {
+  flex: 1 1 33.333%;
+  margin: 0px;
+  box-sizing: border-box;
+  margin-top: 45px;
+  margin-left: -10px;
+}
+
+.about__photo {
+  width: 300px;
+  height: auto;
+}
+
+.about__content > div > div > p:first-child {
+  margin-top: -13px;
+  padding-left: 0px;
+  font-size: 18px;
+  color: #666d89;
+  font-weight: 900;
+  margin-bottom: 0;
+  text-align: left;
+  letter-spacing: -0.3px;
+}
+
+.adam_descr {
+  letter-spacing: -0.05px;
+}
+
+.adam_descr2 {
+  letter-spacing: 0px;
+}
+
+.desmond {
+  letter-spacing: -0.2px;
+}
+
+.desmond_descr {
+  letter-spacing: 0.12px;
+}
+
+.desmond_descr:last-child {
+  letter-spacing: -0.02px;
+}
+
+.about__content > div > div > p:last-child {
+  margin-right: 0;
+  padding-top: 4px;
+  padding-right: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.75em;
+  text-align: left;
+  color: #767e9e;
+  letter-spacing: -0.1px;
+}
+
+.scolara_descr {
+  letter-spacing: 0.14px;
+}
+
+.scolara_descr2 {
+  letter-spacing: -0.02px;
+}
+
+.about__social {
+  text-align: left;
+  margin-top: 22px;
+}
+
+.about__social > img {
+  padding-left: 1px;
+}
+
+.about__social > img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
