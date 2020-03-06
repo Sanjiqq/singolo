@@ -1,0 +1,251 @@
+.quote {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 1020px;
+  height: 654px;
+  margin: 0 auto;
+  border-bottom: 6px solid #f06c64;
+  background-color: #f06c64;
+}
+
+.footer {
+  box-sizing: border-box;
+  width: 1020px;
+  height: 76px;
+  margin: 0 auto;
+  background-color: #2d303a;
+}
+
+.wrapper {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 1020px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.social__footer {
+  display: flex;
+
+  width: 160px;
+  padding-top: 2px;
+  padding-right: 33px;
+}
+
+.wrapper.footer {
+  display: flex;
+}
+.quote__title {
+  font-family: "Lato";
+  font-size: 30px;
+  font-weight: 900;
+
+  padding-top: 62px;
+  letter-spacing: -0.1px;
+  color: #f0d8d9;
+}
+
+.quote__descr::first-line {
+  letter-spacing: 0.16px;
+}
+
+.quote__descr {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7em;
+
+  padding-top: 21px;
+  padding-right: 30px;
+  padding-bottom: 28px;
+  padding-left: 0;
+  letter-spacing: 0;
+  color: #f0d8d9;
+}
+
+p {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+
+  padding-top: 0;
+  padding-left: 2px;
+  letter-spacing: -0.12px;
+  color: #666d89;
+}
+
+img.social:hover {
+  cursor: pointer;
+
+  opacity: 0.6;
+}
+
+.social {
+  margin-right: 4.5px;
+  margin-left: 1px;
+}
+
+img {
+  margin-right: 3px;
+  margin-left: 1px;
+}
+
+textarea {
+  width: 589px;
+  height: 190px;
+  margin-top: 16px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #f0d8d9;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+
+textarea::placeholder {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  color: #f08586;
+}
+
+input {
+  width: 604px;
+  height: 36px;
+  margin-top: 16px;
+  padding-left: 15px;
+  color: #f0d8d9;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+
+button {
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 700;
+
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  color: #f0d8d9;
+  border-color: #e1523d;
+  border-radius: 8px;
+  background-color: #d6564f;
+}
+
+input::placeholder {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+
+  padding-left: 0;
+  color: #f08586;
+}
+
+form {
+  max-width: 625px;
+}
+
+.contact-info__title {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 900;
+
+  padding-top: 16px;
+  padding-left: 19px;
+  letter-spacing: -0.1px;
+  color: #f0d8d9;
+}
+
+.contact-info__descr {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.85em;
+
+  padding-top: 10px;
+  padding-right: 38.7px;
+  padding-left: 18px;
+  text-align: justify;
+  letter-spacing: -0.01px;
+  color: #f0d8d9;
+}
+
+.information_text::first-line {
+  text-align: left;
+}
+
+.quote__form {
+  display: flex;
+}
+
+.contact-info {
+  width: 360px;
+}
+
+.adress__descr {
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+
+  padding-top: 2px;
+  letter-spacing: 0;
+  color: #f0d8d9;
+}
+
+.container {
+  display: grid;
+  max-height: 617px;
+  padding-top: 23px;
+  padding-left: 16px;
+  grid-template-columns: 20px 300px;
+  grid-template-rows: 19px 18px 25px;
+  grid-column-gap: 3.5px;
+  grid-row-gap: 1px;
+}
+
+.mail-col {
+  padding-top: 3px;
+}
+
+.adress {
+  padding-left: 5px;
+}
+
+.tel {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+.phone-number {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: px;
+  padding-left: 2px;
+  text-decoration: none;
+  color: #f0d8d9;
+}
+
+.mail {
+  margin-top: 9px;
+  padding-left: 2px;
+}
+
+.e-mail {
+  font-family: "Lato";
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 3px;
+  padding-left: 2px;
+  text-decoration: none;
+  color: #f0d8d9;
+}
