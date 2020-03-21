@@ -13,15 +13,15 @@
 </head>
 <body>
     <header class="header">
-      <div class="container">
+      <div class="container divs" id="home">
         <a  href="#"><h1>Singolo<span>*</span></h1></a>
         <nav class="navigation">
-          <ul class="menu">
-            <li class="navigation__link"><a href="#" class="menu__link active">Home</a></li>
-            <li class="navigation__link"><a href="#" class="menu__link">Services</a></li>
-            <li class="navigation__link"><a href="#" class="menu__link">Portfolio</a></li>
-            <li class="navigation__link"><a href="#" class="menu__link">About</a></li>
-            <li class="navigation__link"><a href="#" class="menu__link">Contact</a></li>
+          <ul class="menu" id="menu">
+            <li class="navigation__link"><a href="#home" class="menu__link active">Home</a></li>
+            <li class="navigation__link"><a href="#services" class="menu__link">Services</a></li>
+            <li class="navigation__link"><a href="#portfolio" class="menu__link">Portfolio</a></li>
+            <li class="navigation__link"><a href="#about" class="menu__link">About</a></li>
+            <li class="navigation__link"><a href="#contact" class="menu__link">Contact</a></li>
             </ul>
         </nav>
         </div>
@@ -35,7 +35,7 @@
         </div>
     </section>
     <section class="service">
-      <div class="service__item">
+      <div class="service__item divs" id="services">
           <div class="service__title"><p>Our Services</p></div>
           <div class="service__description">
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
@@ -76,7 +76,7 @@
     </section>
     <main>
       <section class="portfolio">
-        <div class="wrap">
+        <div class="wrap divs" id="portfolio">
           <h1 class="portfolio__tittle">Portfolio</h1>
           <p class="portfolio__descr">
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -115,7 +115,7 @@
         </div>
       </section>
       <section class="about">
-        <div class="wrap">
+        <div class="wrap divs" id="about">
           <h2 class="about__tittle">About Us</h2>
           <p>
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -207,7 +207,7 @@
             </div>
           </section>
           <section class="quote">
-            <div class="wrap">
+            <div class="wrap divs" id="contact">
               <h2 class="quote__title">
                 Get a Quote
               </h2>
@@ -305,5 +305,6 @@
             </div>
           </footer>
     </main>
+    <script src="./script.js"></script>
 </body>
 </html>
