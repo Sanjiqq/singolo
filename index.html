@@ -12,26 +12,47 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
-      <div class="container divs" id="home">
-        <a  href="#"><h1>Singolo<span>*</span></h1></a>
-        <nav class="navigation">
-          <ul class="menu" id="menu">
-            <li class="navigation__link"><a href="#home" class="menu__link active">Home</a></li>
-            <li class="navigation__link"><a href="#services" class="menu__link">Services</a></li>
-            <li class="navigation__link"><a href="#portfolio" class="menu__link">Portfolio</a></li>
-            <li class="navigation__link"><a href="#about" class="menu__link">About</a></li>
-            <li class="navigation__link"><a href="#contact" class="menu__link">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+      <div class="header-wrapper wrapper">
+        <div class="burger">
+            <div class="burger__item"></div>
+            <div class="burger__item"></div>
+            <div class="burger__item"></div>
         </div>
+        <div class="header__logo">
+            <h1><a href="#">Singolo<span>*</span></a></h1>
+        </div>
+        <nav class="navigation">
+            <ul class="menu" id="menu">
+              <li class="navigation__link"><a href="#home" class="active">Home</a></li>
+                <li class="navigation__link"><a href="#services">Services</a></li>
+                <li class="navigation__link"><a href="#portfolio">Portfolio</a></li>
+                <li class="navigation__link"><a href="#about">About</a></li>
+                <li class="navigation__link"><a href="#contact">Contact</a></li>
+              </ul>
+        </nav>
     </header>
-    <section class="slider">
-        <div class="slider__container">
-            <a href="#" class="chev__left"><img type ="button"  src="./Assets/img/chev_left.png" alt=""></a>
-            <img class="iphone__vertical" src="./Assets/img/iphone-vertical.png" alt="">
-            <img class="iphone__horizontal"src="./Assets/img/iphone-horizontal.png" alt="">
-            <a href="#" class="chev__right"><img type ="button" src="./Assets/img/chev_right.png" alt=""></img></a>
+    <div class="overlay"></div>
+    <section class="slider divs"  id="home">
+        <div class="wrapper slider__container">
+          <div class="arrows">
+            <button class="left"></button>
+            <button class="right"></button>
+        </div>
+        <div class="slider__phones activated">
+            <div class="vertical">
+                <img src="./Assets/img/iphone-vertical.png" alt="vertical-iphone"> 
+                <div class="iphone-btn"></div>
+                <div class="black-screen" hidden='true'> </div>                   
+            </div>
+            <div class="horizontal">
+                <img src="./Assets/img/iphone-horizontal.png" alt="horizontal-iphone">
+                <div class="iphone-btn"></div>
+                <div class="black-screen" hidden='true'> </div> 
+            </div>
+        </div>
+        <div class="slider__phones slide2">
+                <img src="./Assets/img/Slide-2.png" alt="vertical-iphones">
         </div>
     </section>
     <section class="service">

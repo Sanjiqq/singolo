@@ -23,3 +23,112 @@ function onScroll(event) {
     }
   });
 }
+
+let phones = document.querySelectorAll(".slider__phones");
+let currentSlide = 0;
+let isEnabled = true;
+
+function changeCurrentSlide(n) {
+  currentSlide = (n + phones.length) % phones.length;
+}
+
+function hideSlide(direction) {
+  isEnabled = false;
+  phones[currentSlide].classList.add(direction);
+  phones[currentSlide].addEventListener("animationend", function() {
+    this.classList.remove("activated", direction);
+  });
+}
+
+function showSlide(direction) {
+  phones[currentSlide].classList.add("next", direction);
+  phones[currentSlide].addEventListener("animationend", function() {
+    this.classList.remove("next", direction);
+    this.classList.add("activated");
+    isEnabled = true;
+  });
+
+  if (currentSlide === 1) {
+    document.querySelector("body > .slider").style.backgroundColor = "#648BF0";
+    document.querySelector("body > .slider").style.borderColor = "#6f92ef";
+  } else {
+    document.querySelector("body > .slider").style.backgroundColor = "#f06c64";
+    document.querySelector("body > .slider").style.borderColor = "#ea676b";
+  }
+}
+
+function previousSlide(n) {
+  hideSlide("to-right");
+  changeCurrentSlide(n - 1);
+  showSlide("from-left");
+}
+
+function nextSlide(n) {
+  hideSlide("to-left"); //<-
+  changeCurrentSlide(n + 1);
+  showSlide("from-right");
+}
+
+document.querySelector(".arrows .left").addEventListener("click", function() {
+  if (isEnabled) {
+    previousSlide(currentSlide);
+  }
+});
+
+document.querySelector(".arrows .right").addEventListener("click", function() {
+  if (isEnabled) {
+    nextSlide(currentSlide);
+  }
+});
+
+const IPHONEBTNS = document.querySelectorAll(".iphone-btn");
+
+IPHONEBTNS.forEach(btn =>
+  btn.addEventListener("click", function(event) {
+    let verticalPhoneDiv = document.querySelector(".vertical");
+    let horizintalPhoneDiv = document.querySelector(".horizontal");
+    let verticalBlackScreen = document.querySelector(".vertical .black-screen");
+    let horizontalBlackScreen = document.querySelector(
+      ".horizontal .black-screen"
+    );
+
+    if (verticalPhoneDiv.contains(btn))
+      verticalBlackScreen.hidden = !verticalBlackScreen.hidden;
+    if (horizintalPhoneDiv.contains(btn))
+      horizontalBlackScreen.hidden = !horizontalBlackScreen.hidden;
+  })
+);
+
+const BURGER = document.querySelector(".burger");
+const NAVIGATION = document.querySelector(".navigation");
+const OVERLAY = document.querySelector(".overlay");
+let count = 0;
+
+BURGER.addEventListener("click", event => {
+  count = (count + 1) % 2;
+  if (count === 1) {
+    BURGER.classList.add("active");
+    OVERLAY.classList.add("active");
+    NAVIGATION.classList.add("mobile-active-menu");
+    document.removeEventListener("scroll", onScroll);
+  } else {
+    BURGER.classList.remove("active");
+    NAVIGATION.classList.remove("mobile-active-menu");
+    OVERLAY.classList.remove("active");
+    document.addEventListener("scroll", onScroll);
+  }
+});
+
+const MOBILEMENU = document.querySelector("#menu");
+
+MOBILEMENU.addEventListener("click", event => {
+  if (event.target.closest("ul li a")) {
+    count = (count + 1) % 2;
+    NAVIGATION.classList.remove("mobile-active-menu");
+    BURGER.classList.remove("active");
+    OVERLAY.classList.remove("active");
+    document.addEventListener("scroll", onScroll);
+  } else {
+    event.target.stopPropagation();
+  }
+});
