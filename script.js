@@ -132,3 +132,32 @@ MOBILEMENU.addEventListener("click", event => {
     event.target.stopPropagation();
   }
 });
+
+const MENU_PORTFOLIO = document.getElementById("menu-portfolio");
+const PORTFOLIO = document.querySelector(".portfolio__picture");
+
+PORTFOLIO.addEventListener("click", event => {
+  PORTFOLIO.querySelectorAll("img").forEach(element =>
+    element.classList.remove("active")
+  );
+  event.target.classList.add("active");
+});
+
+MENU_PORTFOLIO.addEventListener("click", event => {
+  MENU_PORTFOLIO.querySelectorAll("p").forEach(el =>
+    el.classList.remove("active")
+  );
+  event.target.classList.add("active");
+
+  let temp = Array.from(PORTFOLIO.querySelectorAll("img"));
+  PORTFOLIO.innerHTML = "";
+  portfolioPictures(temp);
+  temp.forEach(el => PORTFOLIO.appendChild(el));
+});
+
+function portfolioPictures(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
