@@ -157,10 +157,10 @@
           </div>
         </div>
       </section>
-      <section class="about">
-        <div class="wrap divs" id="about">
+      <section class="about divs" id="about">
+        <div class="wrap wrapper">
           <h2 class="about__tittle">About Us</h2>
-          <p>
+          <p class="about__descr">
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
             Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
             lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
@@ -169,24 +169,11 @@
           <div class="about__content">
             <div class="about__person">
               <div>
-                <img
-                  class="about__photo"
-                  src="./Assets/img/adam.png"
-                  alt=""
-                />
+                <img class="about__photo" src="./Assets/img/adam.png" alt="" />
               </div>
               <div>
-                <p class="about__name">Adam Jensen</p>
-                <p>
-                  <span class="adam_descr"
-                    >Quisque luctus, quam eget molestie commodo, lacus
-                    purus</span
-                  >
-                  <br />
-                  <span class="adam_descr2"
-                    >cursus purus, nec rutrum tellus dolor id lorem.</span
-                  >
-                </p>
+                <h4>Adam Jensen</h4>
+                <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
               </div>
               <div class="about__social">
                 <img src="./Assets/img/facebook.png" alt="" />
@@ -197,23 +184,11 @@
             </div>
             <div class="about__person">
               <div>
-                <img
-                  class="about__photo"
-                  src="./Assets/img/desmond.png"
-                  alt=""
-                />
+                <img class="about__photo" src="./Assets/img/desmond.png" alt="" />
               </div>
               <div>
-                <p class="about__name"><span class="desmond">Desmond Miles</span></p>
-                <p>
-                  <span class="desmond_descr"
-                    >Curabitur vestibulum eget mauris quis laoreet.
-                    Phasellus</span
-                  >
-                  <br /><span class="desmond_descr"
-                    >in quam laoreet, viverra lacus ut, ultrices velit.</span
-                  >
-                </p>
+                <h4>Desmond Miles</h4>
+                <p> Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit. </p>
               </div>
               <div class="about__social">
                 <img src="./Assets/img/facebook.png" alt="" />
@@ -224,22 +199,11 @@
             </div>
             <div class="about__person">
               <div>
-                <img
-                  class="about__photo"
-                  src="./Assets/img/scolara.png"
-                  alt=""
-                />
+                <img class="about__photo" src="./Assets/img/scolara.png" alt="" />
               </div>
               <div>
-                <p class="about__name">Scolara Visari</p>
-                <p>
-                  <span class="scolara_descr"
-                    >Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet </span
-                  ><br />
-                  <span class="scolara_descr2"
-                    >turpis, et consequat felis. Quisque condimentum.</span
-                  >
-                </p>
+                <h4>Scolara Visari</h4>
+                <p> Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet  turpis, et consequat felis. Quisque condimentum. </p>
               </div>
               <div class="about__social">
                 <img src="./Assets/img/facebook.png" alt="" />
@@ -261,7 +225,7 @@
                 tortor mauris condimentum nibh.
               </p>
               <div class="quote__form">
-                <form>
+                <form id="onsubmit">
                   <input
                     name="user-name"
                     type="text"
@@ -285,16 +249,24 @@
                   <textarea
                     name="message"
                     placeholder="Describe your project in detail..."
-                    id="message"
+                    id="project"
                     cols="30"
                     rows="14"
                   ></textarea>
-                  <button type="submit">Submit</button>
+                  <button type="submit" style="width: 315px;" id="btn">Submit</button>
+                  <div id="message-block" class="hidden">
+                    <div id="message" class="hidden">
+                        <p><span class="messages" id="result1"></span></p>
+                        <p><span class="messages" id="result2"></span></p>
+                        <p class="text-message"><span class="messages" id="result3"></span></p>
+                        <button class="message-block-btn" id="close-btn">OK</button>
+                    </div>
+                </div>
                 </form>
                 <div class="contact-info">
                   <h3 class="contact-info__title">Contact Information</h3>
                   <p class="contact-info__descr">
-                    Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra
+                    Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
                     nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
                     libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
                     aliquet turpis, et consequat felis.

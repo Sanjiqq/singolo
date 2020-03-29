@@ -161,3 +161,50 @@ function portfolioPictures(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
+const BUTTON = document.getElementById("btn");
+const CLOSE_BUTTON = document.getElementById("close-btn");
+const ONSUBMIT = document.getElementById("onsubmit");
+
+ONSUBMIT.addEventListener("submit", e => {
+  e.preventDefault();
+  return false;
+});
+
+BUTTON.addEventListener("click", e => {
+  if (
+    document.getElementById("user-name").checkValidity() &&
+    document.getElementById("email").checkValidity()
+  ) {
+    e.preventDefault();
+    const subject = document.getElementById("subject").value.toString();
+    const project = document.getElementById("project").value.toString();
+    document.getElementById("result1").innerText = "Письмо отправлено";
+
+    if (subject !== "") {
+      document.getElementById("result2").innerText = "Тема: " + subject;
+    } else {
+      document.getElementById("result2").innerText = "Нет темы";
+    }
+
+    if (project !== "") {
+      document.getElementById("result3").innerText = "Описание: " + project;
+    } else {
+      document.getElementById("result3").innerText = "Нет описания";
+    }
+
+    document.getElementsByTagName("body")[0].classList.add("hide");
+    document.getElementById("message-block").classList.remove("hidden");
+    document.getElementById("message").classList.remove("hidden");
+  }
+});
+
+CLOSE_BUTTON.addEventListener("click", () => {
+  document.getElementById("result1").innerText = "";
+  document.getElementById("result2").innerText = "";
+  document.getElementById("result3").innerText = "";
+  document.getElementsByTagName("body")[0].classList.remove("hide");
+  document.getElementById("message-block").classList.add("hidden");
+  document.getElementById("message").classList.add("hidden");
+  ONSUBMIT.reset();
+});
